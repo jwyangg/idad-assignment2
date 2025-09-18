@@ -19,9 +19,13 @@
         <h1>Assignment 2: Bubble Pop!</h1>
         <p><strong>Creative Prompt:</strong> No Text Characters</p>
         <p><strong>Advanced Technique:</strong> Random | Math.random()</p>
-        <a href="https://idad-bubblepop.netlify.app/" class="prototype-link"
-          >Link to Prototype</a
+        <a
+          href="https://idad-bubblepop.netlify.app/"
+          class="prototype-link"
+          target="_blank"
         >
+          Link to Prototype
+        </a>
       </section>
 
       <!-- About -->
@@ -96,20 +100,32 @@
           </p>
           <p>
             While researching, I explored a range of CSS and JavaScript bubble
-            experiments online. For example:
-            This particular website provides a variety of approaches to styling bubbles using CSS. I used this as inspiration for including an animation and plan to use it as inspiration later on for properly styling the bubbles.
+            experiments online. For example: This particular website provides a
+            variety of approaches to styling bubbles using CSS. I used this as
+            inspiration for including an animation and plan to use it as
+            inspiration later on for properly styling the bubbles.
           </p>
-            <p>CSS Bubble Styling Compilation<a
-              href="https://freefrontend.com/css-bubbles/"
-              target="_blank"
-            ></p>
-            <p>Another project I came across was:
-                This particularly stood out to me because it featured bubbles that could pop, because it’s based off of bubble wrap. This influenced my decision to add the behaviour for my final version. These references helped me gain insight that having an extra feature would keep the interaction engaging, since endlessly generating and watching bubbles could easily become repetitive and boring.
-            </p>
-            <p>Bubble Wrap Example<a
-              href="https://codepen.io/jkantner/pen/MWbbMYZ"
-              target="_blank"
-            ></p>
+          <p>
+            CSS Bubble Styling Compilation:
+            <a href="https://freefrontend.com/css-bubbles/" target="_blank">
+              FreeFrontend Reference
+            </a>
+          </p>
+          <p>
+            Another project I came across was: This particularly stood out to me
+            because it featured bubbles that could pop, because it’s based off
+            of bubble wrap. This influenced my decision to add the behaviour for
+            my final version. These references helped me gain insight that
+            having an extra feature would keep the interaction engaging, since
+            endlessly generating and watching bubbles could easily become
+            repetitive and boring.
+          </p>
+          <p>
+            Bubble Wrap Example:
+            <a href="https://codepen.io/jkantner/pen/MWbbMYZ" target="_blank">
+              CodePen Reference
+            </a>
+          </p>
           <p>
             <a
               href="https://www.youtube.com/watch?v=VYC5Q_9-rB4&ab_channel=JohnDaniels"
@@ -118,7 +134,6 @@
               Windows 10 Bubble Screensaver Reference
             </a>
           </p>
-          
         </div>
         <div class="image">
           <img
@@ -129,14 +144,25 @@
         <div class="image">
           <img
             src="images/bubblecompilation.png"
-            alt="Windows bubbles reference"
+            alt="CSS bubble compilation"
           />
         </div>
         <div class="image">
-          <img
-            src="images/bubblewrap.png"
-            alt="Windows bubbles reference"
-          />
+          <img src="images/bubblewrap.png" alt="Bubble wrap example" />
+        </div>
+      </section>
+
+      <!-- System Map -->
+      <section class="card">
+        <div class="text">
+          <h2>System Map</h2>
+          <p>
+            The image shows a system map of the webpage and how it is expected
+            that users will interact with the page.
+          </p>
+          <div class="image">
+            <img src="images/system-map.jpg" alt="System Map" />
+          </div>
         </div>
       </section>
 
@@ -150,10 +176,10 @@
             it mirrors the unpredictability of their real-world behaviour.
           </p>
           <p>The technique of randomisation is used in two key ways:</p>
-          <ul>
+          <ol>
             <li>To vary the size of the bubbles</li>
             <li>To vary the musical notes played</li>
-          </ul>
+          </ol>
           <p>
             This creates a dynamic and engaging interaction where every click
             produces a slightly different visual and audio result. Later on, I
@@ -166,8 +192,18 @@
               href="https://www.freecodecamp.org/news/how-to-create-animated-bubbles-with-html5-canvas-and-javascript/"
               target="_blank"
             >
-              FreeCodeCamp Bubble Tutorial </a
-            ><br />
+              FreeCodeCamp Bubble Tutorial
+            </a>
+          </p>
+          <div class="image">
+            <img src="images/freecodecamp.png" alt="FreeCodeCamp Example" />
+            <p>
+              At first I used this tutorial as a point of reference but as I was
+              struggling to understand I sought advice on what would be an
+              easier method.
+            </p>
+          </div>
+          <p>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement"
               target="_blank"
@@ -175,9 +211,44 @@
               MDN createElement Documentation
             </a>
           </p>
-        </div>
-        <div class="image">
-          <img src="images/code-snippet.png" alt="Code snippet screenshot" />
+          <div class="image">
+            <img src="images/mdnexample.png" alt="MDN Example" />
+            <p>
+              This was the direction I was instead, suggested to pursue. I used
+              this as a guide to start building the webpage.
+            </p>
+          </div>
+
+          <h3>Bubble Generation</h3>
+          <p>
+            The bubbles are generated using a createElement() function. A new
+            element is created and styled via CSS, positioned at the cursor’s
+            coordinates. Each bubble is given a randomised size through
+            math.random(). Simultaneously, a random index is generated with both
+            math.floor and math.random to select a note from an array, in which
+            the audio is provided via Tone.js.
+          </p>
+          <div class="image">
+            <img src="images/JS-screenshot.png" alt="JavaScript Screenshot" />
+          </div>
+
+          <h3>Feedback and Animation</h3>
+          <p>
+            The animation is handled though CSS transitions, which allows the
+            bubbles to float upward and fade out. After the animation completes,
+            a setTimeeout function removes the element from the page. This
+            prevents the canvas from being overwhelmed with inactive bubbles,
+            but for the final project I intend to keep bubbles onscreen until
+            they are interacted with.
+          </p>
+          <div class="image">
+            <img src="images/CSS-screenshot.png" alt="CSS Screenshot" />
+          </div>
+          <p>
+            As I endeavour to randomise the colours of the bubbles generated, I
+            may have to change the method in which the bubbles are generated, as
+            JS is more suited for this purpose.
+          </p>
         </div>
       </section>
 
@@ -237,9 +308,6 @@
             better align the user’s expectations with the playful concept of
             bubbles.
           </p>
-        </div>
-        <div class="image">
-          <img src="images/user-testing.png" alt="User testing notes" />
         </div>
       </section>
     </main>

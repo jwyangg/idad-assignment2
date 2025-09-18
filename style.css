@@ -12,65 +12,36 @@ body {
   color: #f0f0f0;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
-.container {
-  max-width: 1000px;
+section {
+  padding: 40px 20px;
+  max-width: 900px;
   margin: auto;
-  padding: 2rem;
-}
-
-.hero {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
 }
 
 h2 {
-  color: #8fbaff;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .card {
-  display: flex;
-  align-items: center;
-  margin: 2rem 0;
   background: linear-gradient(135deg, #4d64cb 0%, #70459b 100%);
-  border-radius: 16px;
-  padding: 2rem;
-  gap: 2rem;
-}
-
-.card.reverse {
-  flex-direction: row-reverse;
-}
-
-.text {
-  flex: 2;
-}
-
-.image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image img {
-  max-width: 100%;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-ul,
-ol {
-  margin-left: 1.5rem;
+.card-content {
+  display: block; /* everything stacked */
 }
 
-.prototype-link {
-  color: #8fbaff;
-  text-decoration: underline;
+.card img {
+  display: block;
+  margin: 20px auto; /* centered image */
+  max-width: 100%;
+  border-radius: 8px;
 }
