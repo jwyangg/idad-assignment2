@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Modak&family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2: Bubble Pop!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <!-- Title -->
+      <section class="hero">
+        <h1>Assignment 2: Bubble Pop!</h1>
+        <p><strong>Creative Prompt:</strong> No Text Characters</p>
+        <p><strong>Advanced Technique:</strong> Random | Math.random()</p>
+        <a href="https://idad-bubblepop.netlify.app/" class="prototype-link"
+          >Link to Prototype</a
+        >
+      </section>
+
+      <!-- About -->
+      <section class="card">
+        <div class="text">
+          <h2>About Bubble Pop</h2>
+          <p>
+            My project explores the “No Text Characters” prompt by designing a
+            UI that relies on visual and auditory cues. The entire experience is
+            built around the concept of bubbles. Each click will generate a
+            bubble and a corresponding sound. Upon clicking the generated
+            bubbles, the bubbles will pop and, again, generate an appropriate
+            sound.
+          </p>
+          <p>
+            The idea was sparked by the image of soap and its transformation
+            into bubbles, which naturally suggested an interactive system where
+            bubbles could be created and then pop. The design is intended to
+            evoke a sense of fun and curiosity, much like blowing bubbles as a
+            child.
+          </p>
+        </div>
+      </section>
+
+      <!-- Prototype Progress -->
+      <section class="card reverse">
+        <div class="text">
+          <h2>Prototype Progress</h2>
+          <p>
+            The current prototype allows users to generate bubbles by clicking
+            anywhere on the screen. Each bubble is created at the cursor’s
+            location, assigned a random size, and linked with a random chosen
+            musical note. The bubbles float upwards, fade out, and are
+            eventually removed from the webpage.
+          </p>
+          <p>
+            At this stage, the interaction is deliberately simple so I could
+            test the mechanics of bubble generation, animation, and audio. This
+            helped me evaluate whether users would find the floating and fading
+            satisfying, or whether a different animation style would be more
+            engage (and necessary).
+          </p>
+          <p>
+            The prototype differs from the envisioned final project in several
+            key ways: the bubbles do not yet pop when clicked, there is no
+            option to reset the canvas, and colours are not yet randomised.
+          </p>
+        </div>
+      </section>
+
+      <!-- Visual Style -->
+      <section class="card">
+        <div class="text">
+          <h2>Visual Style</h2>
+          <h3>Modal Popup</h3>
+          <p>
+            For the modal popup, I decided to reflect the theme visually by
+            using a bubble-shaped font and a palette of purple and blue tones.
+            These colours echo the way bubbles reflect light, often showing a
+            purplish or bluish tint. Although the modal is not central to the
+            interaction, keeping this consistent design helps create a cohesive
+            first impression.
+          </p>
+          <h3>Bubbles</h3>
+          <p>
+            The visual style was heavily influenced by the Windows 10 bubble
+            screensaver, which displays softly glowing bubbles floating against
+            a dark background. This inspired my choice of a darker backdrop so
+            that the colours and transparency of the bubbles stand out more
+            vividly. A dark background also helps emphasise the glowing,
+            floating quality I want to capture.
+          </p>
+          <p>
+            While researching, I explored a range of CSS and JavaScript bubble
+            experiments online. For example:
+            This particular website provides a variety of approaches to styling bubbles using CSS. I used this as inspiration for including an animation and plan to use it as inspiration later on for properly styling the bubbles.
+          </p>
+            <p>CSS Bubble Styling Compilation<a
+              href="https://freefrontend.com/css-bubbles/"
+              target="_blank"
+            ></p>
+            <p>Another project I came across was:
+                This particularly stood out to me because it featured bubbles that could pop, because it’s based off of bubble wrap. This influenced my decision to add the behaviour for my final version. These references helped me gain insight that having an extra feature would keep the interaction engaging, since endlessly generating and watching bubbles could easily become repetitive and boring.
+            </p>
+            <p>Bubble Wrap Example<a
+              href="https://codepen.io/jkantner/pen/MWbbMYZ"
+              target="_blank"
+            ></p>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=VYC5Q_9-rB4&ab_channel=JohnDaniels"
+              target="_blank"
+            >
+              Windows 10 Bubble Screensaver Reference
+            </a>
+          </p>
+          
+        </div>
+        <div class="image">
+          <img
+            src="images/windows-bubble.png"
+            alt="Windows bubbles reference"
+          />
+        </div>
+        <div class="image">
+          <img
+            src="images/bubblecompilation.png"
+            alt="Windows bubbles reference"
+          />
+        </div>
+        <div class="image">
+          <img
+            src="images/bubblewrap.png"
+            alt="Windows bubbles reference"
+          />
+        </div>
+      </section>
+
+      <!-- Technical Approach -->
+      <section class="card reverse">
+        <div class="text">
+          <h2>Technical Approach</h2>
+          <p>
+            I chose randomisation (Math.random()) as my advanced JavaScript
+            technique. This technique felt the most natural for bubbles because
+            it mirrors the unpredictability of their real-world behaviour.
+          </p>
+          <p>The technique of randomisation is used in two key ways:</p>
+          <ul>
+            <li>To vary the size of the bubbles</li>
+            <li>To vary the musical notes played</li>
+          </ul>
+          <p>
+            This creates a dynamic and engaging interaction where every click
+            produces a slightly different visual and audio result. Later on, I
+            will be implementing it to vary the colour of the bubbles produced
+            as well. The location of the bubble generated will not be randomised
+            as I believe it will not be an intuitive way of interacting.
+          </p>
+          <p>
+            <a
+              href="https://www.freecodecamp.org/news/how-to-create-animated-bubbles-with-html5-canvas-and-javascript/"
+              target="_blank"
+            >
+              FreeCodeCamp Bubble Tutorial </a
+            ><br />
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement"
+              target="_blank"
+            >
+              MDN createElement Documentation
+            </a>
+          </p>
+        </div>
+        <div class="image">
+          <img src="images/code-snippet.png" alt="Code snippet screenshot" />
+        </div>
+      </section>
+
+      <!-- Reflection -->
+      <section class="card">
+        <div class="text">
+          <h2>Reflection on Feedback</h2>
+          <p>
+            I asked 3 questions to evaluate the intuitiveness of the prototype.
+            The questions are as following:
+          </p>
+          <ol>
+            <li>
+              Did you understand that clicking anywhere would generate bubbles?
+            </li>
+            <li>
+              Did the look and movement of the bubbles match the sounds they
+              made?
+            </li>
+            <li>
+              Was the behaviour of the bubbles what you imagined would happen
+              when you clicked?
+            </li>
+          </ol>
+          <p>
+            Overall, users quickly grasped the main interaction, however, two
+            key issues were discovered.
+          </p>
+          <h3>Sound Design</h3>
+          <p>
+            Although randomised notes made each bubble unique, some users felt
+            the sounds did not match the appearance and behaviour of the
+            bubbles. They described the tones as too much like a piano and
+            suggested they should sound more “child-like”. Based on this, I plan
+            to redesign the audio system so that the sound is linked more
+            directly to the bubble’s characteristics. For example, larger
+            bubbles will produce lower-pitched sounds and smaller bubbles will
+            produce higher-pitched ones. This mapping should feel more intuitive
+            and consistent.
+          </p>
+          <h3>Animation</h3>
+          <p>
+            Some users enjoyed seeing the bubbles float and fade away, but
+            others expected them to pop or bounce around. This feedback
+            confirmed my initial suspicion that fading out would not sustain
+            engagement. For the final design, I plan to make the bubbles persist
+            on the screen until clicked, at which point they will pop with a
+            corresponding sound effect. If possible, I will also experiment with
+            having the bubbles bounce gently around the screen, which may
+            further increase the sense of play.
+          </p>
+          <h3>Final Thoughts</h3>
+          <p>
+            Through this feedback, I realised that my prototype demonstrated the
+            technical feasibility of the idea but still needs further
+            refinement. By adjusting the sound design and animation, I can
+            better align the user’s expectations with the playful concept of
+            bubbles.
+          </p>
+        </div>
+        <div class="image">
+          <img src="images/user-testing.png" alt="User testing notes" />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
