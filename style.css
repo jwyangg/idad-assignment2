@@ -3,11 +3,43 @@
   font-family: "Modak", system-ui;
   font-weight: 400;
   font-style: normal;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
+}
+
+h1 {
+  font-family: "Modak", system-ui;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #f7c3fd;
+}
+
+.prototypeLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(167, 132, 189, 0.337);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.headings {
+  text-align: center;
+}
+
+.links {
+  text-align: center;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #0a0a0a;
   color: #f0f0f0;
   margin: 0;
@@ -24,7 +56,7 @@ section {
 h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #fcf69f;
 }
 
 .card {
@@ -44,4 +76,38 @@ h2 {
   margin: 20px auto; /* centered image */
   max-width: 100%;
   border-radius: 8px;
+}
+
+.imageRow {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.imageRow .image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.imageRow img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+a {
+  color: #8fbaff; /* light blue */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #cfa9ff; /* soft purple on hover */
+}
+
+a:visited {
+  color: #b3aaff; /* muted violet for visited links */
 }
